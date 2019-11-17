@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #383838; */
+}
+
+body{
+    background-color: #383838;
+    cursor: url('../img/smallcursor.gif'), auto;
+}
+
+.container{
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    margin: 0 auto;
+    background-image: url('../img/backgroundsmall.png');
+    background-size: contain;
+}
+
+.jacky{
+    position: absolute;
+    /* top: 200px;
+    left: 10vw; */
+
+    animation: jaki-move-x 30s;
+    /* animation-delay: 0s, 10s; */
+    /* animation-duration: 10s, 1s; */
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: alternate; */
+    animation-timing-function: cubic-bezier(.57,.74,.44,.27); /* cubic-bezier(.25,1.07,.81,.17); */
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* .ykcaj{
+    position: absolute;
+    animation: jaki-move-y 10s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(.25,1.07,.81,.17);
+} */
+
+@keyframes jaki-move-x{
+    0%{top: 68vh; left: 79vw; transform: scaleX(1);}
+    5%{top: 68vh; left: 79vw; transform: scaleX(1);}
+    45%{top: 20vh; left: 10vw; transform: scaleX(1);}
+    50%{top: 20vh; left: 10vw; transform: scaleX(1);}
+    51%{top: 20vh; left: 10vw; transform: scaleX(-1);}
+    95%{top: 68vh; left: 79vw; transform: scaleX(-1);}
+    100%{top: 68vh; left: 79vw; transform: scaleX(-1);}
+    /* 99%{top: 68vh; left: 79vw; transform: scaleX(-1);}
+    100%{top: 68vh; left: 79vw; transform: scaleX(1);} */
+}
+
+    /* @keyframes jaki-move-y{
+    100%{transform: translate3D(10px, 10px, 0)} */
+    /* 0%{top: 68vh; left: 79vw;}
+    5%{top: 68vh; left: 79vw;}
+    45%{top: 40vh; left: 10vw;}
+    50%{top: 40vh; left: 10vw;}
+    51%{top: 40vh; left: 10vw;}
+    95%{top: 68vh; left: 79vw;}
+    100%{top: 68vh; left: 79vw;} */
+/* } */
+
+/* @keyframes jaki-flip{
+    0%{transform: scaleX();}
+    100%{transform: scaleX(-1);}
+} */
+
+.jacky:hover{
+    /* transform: translate3d(100px,20px,50px); */
+    animation-play-state: paused;
+}
+
+.mikey{
+    position: absolute;
+    /* top: 20px;
+    left: 30vw; */
+    /* animation: mikey-x 20s infinite linear; */
+    animation: mikey-y 3s alternate infinite ease-in-out;
+    animation-play-state: running;
+}
+
+.yekim{
+    position: absolute;
+    /* animation: mikey-y 3s alternate infinite ease-in-out; */
+    animation: mikey-x 20s infinite cubic-bezier(.22,.54,.49,.19);
+    animation-play-state: running;
+}
+
+@keyframes mikey-x{
+    0%{top: 10vh; left: 5vw; transform: scaleX(-1);}
+    45%{top: 14vh; left: 82vw; transform: scaleX(-1);}
+    50%{top: 14vh; left: 82vw; transform: scaleX(-1);}
+    51%{top: 14vh; left: 82vw; transform: scaleX(1);}
+    100%{top: 10vh; left: 5vw; transform: scaleX(1);}
+}
+
+@keyframes mikey-y{
+    100%{transform: translatey(35vh);}
+}
+
+.mikey:hover{
+    animation-play-state: paused;
+}
+
+.yekim:hover{
+    animation-play-state: paused;
+}
+
+.maki{
+    position: absolute;
+    /* top: 1vh;
+    left: 43vw; */
+    transition-duration: .2s;
+    /* transition-timing-function: ease-in-out; */
+    animation: maki-run .8s infinite linear;
+    animation-play-state: paused;
+}
+
+.maki:hover{
+    transform: translate3d(0, -40px, 10px);
+    animation-play-state: running;
+}
+
+@keyframes maki-run{
+    0%{top: 1vh; left: 43vw;}
+    100%{left: 5vw; top: 90vh;}
+}
